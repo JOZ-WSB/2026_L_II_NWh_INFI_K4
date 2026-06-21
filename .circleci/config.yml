@@ -10,5 +10,5 @@ jobs:
       - run: make test
 workflows:
   basic:
-    jobs:
+    joobs:
       - build-and-test

@@ -5,9 +5,17 @@ jobs:
     machine:
       image: ubuntu-2004:current
     steps:
-      - checkout
-      - run: make deps
-      - run: make test
+        - checkout
+        
+        - run:
+            name: Install dependencies
+            command: make deps
+        - run:
+            name: Run linter
+            command: make lint
+        - run:
+            name: Run tests
+            command: make test
 workflows:
   basic:
     jobs:
